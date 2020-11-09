@@ -1,15 +1,30 @@
 <html>
 
 <head>
-    <title>TicTacToe</title>
-    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <title>Tic tac toe</title>
 </head>
 
 <body>
-    <h2><span>Player 1</span><span>Player 2</span></h2>
-
+    <img class="game-over d-none" id="game-over" src="./img/game-over.png">
+    <button id="restart-btn" class="restart-btn d-none" onclick="restart()">Restart</button>
+    <div class="player-panel">
+        <div class="player-inactive" id="player-1">
+            <img class="" src="./img/circle.png">Player 1
+        </div>
+        <div id="player-2">
+            <img class="" src="./img/cross.png"> Player 2
+        </div>
+    </div>
+    <div id="line-1" class="horizontal-line" style="top: 265px;"></div>
+    <div id="line-2" class="horizontal-line" style="top: 400px;"></div>
+    <div id="line-3" class="horizontal-line" style="top: 532px;"></div>
+    <div id="line-4" class="horizontal-line make-vertical" style="top: 400px; left: 220px;"></div>
+    <div id="line-5" class="horizontal-line make-vertical" style="top: 400px;"></div>
+    <div id="line-6" class="horizontal-line make-vertical" style="top: 400px; left: 495px;"></div>
+    <div id="line-7" class="horizontal-line" style="top: 400px; transform: rotate(45deg) scaleX(0.0);"></div>
+    <div id="line-8" class="horizontal-line" style="top: 400px; transform: rotate(-45deg) scaleX(0.0);"></div>
     <table>
         <tr>
             <td onclick="fillShape(0)">
@@ -53,8 +68,8 @@
                 <img id="cross-8" class="shape d-none" src="./img/cross.png">
             </td>
         </tr>
-
     </table>
+
 </body>
 
 </html>
